@@ -59,7 +59,7 @@ const hideHeader = function (){
 
                 //========bottons===========/
     const heroSlider = document.querySelector("[data-hero-slider]");
-    const heroSliderItems = document.querySelector("[data-hero-slider-item]");
+    const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
     const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
     const heroSliderNextBtn = document.querySelector("[data-next-btn]");
 
@@ -68,8 +68,8 @@ const hideHeader = function (){
 
     const updateSliderPos = function () {
         lastActiveSliderItem.classList.remove("active");
-        heroSliderItems[currentSliderPos].classList.add("active");
-        lastActiveSliderItem =heroSliderItems[currentSliderPos];
+        heroSliderItems[currentSlidePos].classList.add("active");
+        lastActiveSliderItem = heroSliderItems[currentSlidePos];
     }
 
     const slideNext =function () {
@@ -78,7 +78,7 @@ const hideHeader = function (){
     }
 
     else{
-        currentSlidePos++;
+        currentSlidePos ++;
     }
   
 
@@ -89,7 +89,7 @@ const hideHeader = function (){
  
       const slidePrev = function (){
         if(currentSlidePos <= 0){
-            currentSlidePos = heroSliderItems.length -1;
+            currentSlidePos = heroSliderItems.length -1 ;
         }
 
         else{
@@ -109,7 +109,7 @@ const hideHeader = function (){
         }, 7000);
       }
 
-      addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function(){
+      addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function() {
         clearInterval(autoSlideInterval);
       });
 

@@ -98,13 +98,13 @@ li{
 
 a,
 img,
-button,
-input,
-textarea,
 data,
 span,
+input,
+button,
+select,
 ion-icon,
-select
+textarea
 {
     display: block;
     
@@ -143,19 +143,21 @@ address{
     font-style: normal;
 }
 html{
+     font-size: 10px;
     scroll-behavior: smooth;
-    font-size: 10px;
+   
 }
 
 body{
+    background-color: var(--eerie-black-1);
+    color: var(--white);
     font-family: var(--fontFamily-dm_sans);
     font-size: var(--fontSize-body-4);
     font-weight: var(--weight-regular);
     line-height: var(--lineHeight-5);
-    color: var(--white);
-    background-color: var(--eerie-black-1);
     overflow: hidden;
     height: 300vh;
+ 
     
 }
 
@@ -365,7 +367,63 @@ body.nav-active
     position: relative;
 
 }
- 
+
+/*============reused style==========*/
+
+.container{
+    padding-inline: 16px; 
+}
+
+.separator{
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold-crayola);
+    transform: rotate(45deg);
+
+}
+.contact-label{
+    font-weight: var(--weight-bold);
+}
+
+.contact-number{
+    color: var(--gold-crayola);
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+.hover-underline{
+    position: relative;
+    max-width: max-content;
+}
+
+.hover-underline::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    border-block: 1px solid var(--gold-crayola);
+    transform: scaleX(0.2);
+    opacity: 0;
+    transition: var(--transition-2);
+
+}
+
+.hover-underline:is(:hover, :focus-visible)::after{
+    transform: scaleX(1);
+    opacity: 1;
+
+}
+
+.contact-number::after {
+    bottom: -5px;
+}
+
+.text-center{
+    text-align: center;
+}
+
 
 
 
@@ -442,63 +500,6 @@ body.nav-active
     display: none;
 }
 
-/*============reused style==========*/
-.container{
-    padding-inline: 16px; 
-}
-
-.separator{
-    width: 8px;
-    height: 8px;
-    border: 1px solid var(--gold-crayola);
-    transform: rotate(45deg);
-
-}
-
-.contact-label{
-    font-weight: var(--weight-bold);
-}
-
-.contact-number{
-    color: var(--gold-crayola);
-    max-width: max-content;
-    margin-inline: auto;
-}
-
-.hover-underline{
-    position: relative;
-    max-width: max-content;
-}
-
-.hover-underline::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 5px;
-    border-block: 1px solid var(--gold-crayola);
-    transform: scaleX(0.2);
-    opacity: 0;
-    transition: var(--transition-2);
-
-}
-
-.hover-underline:is(:hover, :focus-visible)::after{
-    transform: scaleX(1);
-    opacity: 1;
-
-}
-
-.contact-number::after {
-    bottom: -5px;
-}
-
-.text-center{
-    text-align: center;
-}
-
-
 
 /*============Header============*/
 
@@ -573,7 +574,7 @@ header.hide{
     top: 0;
     left: -360px;
     bottom: 0;
-    max-width: 300px;
+    max-width: 360px;
     width: 100%;
     padding-inline: 30px;
     padding-block-end: 50px;
@@ -649,13 +650,13 @@ header.hide{
     transform:translateX(20px);
 }
 
-.navbar-link .separator {
+.navbar-link .separator{
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%) rotate(45deg);
     opacity: 0;
-    transition: var var(--transition-1);
+    transition: var(--transition-1);
 }
 
 .navbar-link:is(:hover, :focus-visible, .active) .separator{

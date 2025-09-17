@@ -249,7 +249,7 @@ body.nav-active
     font-size: var(--fontSize-label-1);
 }
 .label-2{
-    font-size: var(--fontSize-label-2);
+    font-size:30px;
 }
 
 .img-cover{
@@ -386,7 +386,24 @@ body.nav-active
 }
 .img-holder{
     aspect-ratio: var(--width) / var(--height);
+    overflow: hidden;
+    background-color: var(--eerie-black-4);
 }
+
+.btn-text{
+    color: var(--gold-crayola);
+    padding-block-end: 4px;
+    margin-inline: auto;
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-3);
+    font-weight: var(--weight-bold);
+    transition: var(--transition-1);
+}
+.btn-text:is(:hover, :focus-visible){
+    color: var(--white);
+}
+
+
 
  
 

@@ -401,11 +401,15 @@ body.nav-active
 }
 .btn-text:is(:hover, :focus-visible){
     color: var(--white);
+
+}
+.shape{
+    display: none;
+    position: absolute;
+    max-width: max-content;
+    z-index: -1;
 }
 
-
-
- 
 
 
 
@@ -893,6 +897,13 @@ header.hide{
     animation-delay: 2s;
 }
 
+/*============SERVICEEEE==========*/
+
+.service .section-title
+    {
+        margin-block-end: 16px;
+}
+
 
 
 
@@ -905,7 +916,7 @@ header.hide{
  
 
 
-/*============line height==========*/
+
 /*============line height==========*/
 /*============line height==========*/
 /*============line height==========*/

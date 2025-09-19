@@ -117,6 +117,11 @@ const hideHeader = function (){
 
       window.addEventListener("load", autoSlide);
     
+      //==================paralax efffect====================//
+
+      const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+
+
      
 
 

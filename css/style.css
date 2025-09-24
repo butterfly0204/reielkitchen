@@ -249,7 +249,7 @@ body.nav-active
     font-size: var(--fontSize-label-1);
 }
 .label-2{
-    font-size:30px;
+    font-size: var(--fontSize-body-1);
 }
 
 .img-cover{
@@ -1115,8 +1115,42 @@ header.hide{
     margin-block-start: 10px;
 
 
+
 } 
 
+.menu-card .span {
+    color: var(--gold-crayola);
+    margin-block: 10px;
+
+}
+.menu-card .card-text{
+    color: var(--quick-silver);
+    line-height: var(--lineHeight-4);
+}
+
+.menu-text .span{
+    display: inline-block;
+    color: var(--gold-crayola);
+
+}
+
+.menu .btn{
+    margin-inline: auto;
+    margin-block-start: 26px;
+}
+.menu .shape {
+    display: block;
+    width: 70%;
+}
+
+.menu .shape-2{
+    top: 0;
+    left: 0;
+}
+
+.menu .shape-3{
+    
+}
 /*============line height==========*/
 /*============line height==========*/
 /*============line height==========*/

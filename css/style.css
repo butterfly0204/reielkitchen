@@ -1324,7 +1324,46 @@ textarea.input-field{
     
     background-position: top left;
 }
-/*============line height==========*/
+/*================Features   ===================*/
+
+.features .section-title{
+    margin-block-end: 40px;
+}
+
+.feature-card{
+    padding: 30px 20px 40px;
+
+}
+
+.feature-item:nth-child(2n+1) .feature-card{
+    background-color: var(--eerie-black-3) ;
+
+}
+.feature-item:nth-child(2n) .feature-card{
+    background-color: var(--smoky-black-3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*============line height==========*/
 /*============line height==========*/
 /*============line height==========*/

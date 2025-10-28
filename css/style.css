@@ -1614,7 +1614,32 @@ textarea.input-field{
         display: flex;
         align-items: center;
 
+        
     }
+    .topbar .container{
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .topbar-item{
+        gap: 6px;
+    }
+
+    .topbar-item ion-icon {
+        --ionicon-stroke-width:60px;
+    }
+
+    .topbar-item .span {
+        font-size: var(--fontSize-label-1)
+    }
+
+    .topbar .link {
+       transition: var(--transition-1);
+    }
+    .topbar .link:is(:hover, :focus-visible){
+        
+    }
+
 
     
 

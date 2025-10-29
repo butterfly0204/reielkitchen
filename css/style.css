@@ -1606,7 +1606,7 @@ textarea.input-field{
     }
 
     .topbar-item:not(.link),
-    .topbar, .separator{
+    .topbar .separator{
         display:none;
     }
 
@@ -1637,17 +1637,30 @@ textarea.input-field{
        transition: var(--transition-1);
     }
     .topbar .link:is(:hover, :focus-visible){
-        
+        color:var(--gold-crayola)
+
     }
+
+    
+/*============Header==========*/
+.header {
+     top: 51px;
+    }
+.header.active { 
+    top:0;
+}
+.header .btn{ 
+    display: block;
+    margin-inline-start: auto;
+}
 
 
     
-
+ 
 }
 
 
 
-/*============line height==========*/
 /*============line height==========*/
 /*============line height==========*/
 
